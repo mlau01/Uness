@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="730" leftMargin="56" rightMargin="56" topMargin="28" bottomMargin="28" uuid="0d108fc1-dc80-4770-bb63-a1439e9ce910">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="RMA_rmanumber" class="java.lang.String"/>
+	<parameter name="DEVICE_model" class="java.lang.String"/>
+	<parameter name="DEVICE_serial" class="java.lang.String"/>
+	<parameter name="RMA_sender" class="java.lang.String"/>
+	<parameter name="RMA_datesent" class="java.lang.String"/>
+	<parameter name="RMA_travelvoucher" class="java.lang.String"/>
+	<parameter name="RMA_comment" class="java.lang.String"/>
+	<detail>
+		<band height="426" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="110" width="73" height="20" uuid="5d18117a-736b-4bce-aeed-b776c94bde49"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Machine]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="130" width="250" height="20" uuid="d82b76c8-f3c0-4f2d-b522-4c8187ae047c"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVICE_model}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="130" width="75" height="20" uuid="6a165f3b-d486-4f5d-8bff-a3e4046f395f"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Modèle:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="150" width="75" height="20" uuid="569bbe73-cea3-45e5-9acd-88df00460938"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[N° de série:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="150" width="250" height="20" uuid="880d0ba8-b04b-49f8-939d-5584e13bcde2"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVICE_serial}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="50" y="0" width="192" height="53" uuid="adafa00b-b555-4f94-85f5-61177ec0c923"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Chez constructeur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="184" width="73" height="20" uuid="074ef83e-efb4-4ad9-b323-4cdec1bec3b7"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Envoi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="204" width="75" height="20" uuid="60b5da8a-3208-429b-9043-8cde630ba269"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Envoyé par: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="224" width="75" height="20" uuid="d9b52e14-c152-44de-87a8-59fb7892807d"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Envoyé le:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="50" width="250" height="25" uuid="2daeb5fa-16dc-448a-931e-90775bdae324"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RMA_rmanumber}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="53" width="50" height="25" uuid="e7284176-3abe-477a-a77e-5834c5d290a7"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RMA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="244" width="75" height="20" uuid="b9f0393f-284a-4430-b754-7f21cd22e253"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Bon transp:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="204" width="250" height="20" uuid="80dbe231-7d0e-4b83-a627-369d0eecdff6"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RMA_sender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="224" width="250" height="20" uuid="f895181a-365d-4831-8ad8-a886f76f8d94"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RMA_datesent}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="244" width="250" height="20" uuid="802ad81f-45ce-48e1-b50c-96fdb86af021"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RMA_travelvoucher}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="283" width="73" height="20" uuid="bbdf917b-0567-4dfa-9754-752658f02ed8"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remarques]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="303" width="325" height="76" uuid="1ce2d87b-043d-4c61-932b-e613591c9f48"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{RMA_comment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="29" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy" isBlankWhenNull="true">
+				<reportElement x="180" y="0" width="120" height="20" uuid="06b70c48-a3f0-41d9-b332-29dac7a75ad6"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

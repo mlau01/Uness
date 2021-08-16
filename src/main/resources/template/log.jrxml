@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="log" language="groovy" pageWidth="595" pageHeight="842" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="28" bottomMargin="28" uuid="64ed2302-643d-455e-9f5d-07dbd96d5fb4">
+	<property name="ireport.zoom" value="1.0000000000000009"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<parameter name="DEVICE_model" class="java.lang.String"/>
+	<parameter name="DEVICE_location" class="java.lang.String"/>
+	<parameter name="DEVICE_serial" class="java.lang.String"/>
+	<parameter name="DEVICE_note" class="java.lang.String"/>
+	<field name="LOG_author" class="java.lang.String"/>
+	<field name="LOG_comment" class="java.lang.String"/>
+	<field name="LOG_date" class="java.lang.String"/>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="156" height="48" uuid="37342e20-0d2c-42a3-810f-c7cf0f358160"/>
+				<textElement>
+					<font fontName="Arial" size="22" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Feuille de log]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="483" height="1" uuid="0dbbc838-7ae0-48f5-9021-ab6cefd008aa"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="1" width="121" height="20" uuid="bddbc791-25ae-4957-8a0a-27be36ef6056"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Machine]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="1" width="121" height="20" uuid="f7908687-7812-4262-a8b6-14ad29a29aa7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Localisation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="0" width="121" height="20" uuid="7a7287c5-9352-4903-a9fa-78d446fa5d3c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N° de série]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="0" width="121" height="20" uuid="aa73d158-dfa7-4b97-a139-c7c5d7506033"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remarque]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="39" width="483" height="1" uuid="8615c7c3-cd45-4f82-ad10-fa2cbc5c9e1d"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="0" y="21" width="121" height="20" uuid="d0695ea1-6fa4-4c54-8ee4-19e73fd25e9c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVICE_model}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="19" width="121" height="20" uuid="2ca7d5f9-ab7e-42bf-916c-b3d610b03b44"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVICE_location}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="241" y="19" width="121" height="20" uuid="6671737e-297d-4e82-9b3f-bbcf3389b576"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVICE_serial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="21" width="121" height="20" uuid="b2182648-224c-4caa-9179-d609c3990d55"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DEVICE_note}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="75" height="20" uuid="813e6f22-a28a-4107-947e-725f9b29cdda"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="0" width="300" height="20" uuid="cff2a8e9-dc58-4c55-83db-e57c7114af89"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Log]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="0" width="85" height="20" uuid="2d3c9bc5-23d7-4621-be98-a31172bdf002"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="19" width="483" height="1" uuid="bc1d3d94-4a0e-4082-8a2f-a701458a4073"/>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="75" height="15" uuid="003cd73d-e437-43ce-bb17-9d8e5363a393"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOG_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="85" height="15" uuid="de96e10e-b8b1-4b09-aa20-d7d923bdf7c0"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOG_author}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="75" y="2" width="323" height="13" uuid="66d7243d-c22b-4935-a613-15032e953245"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{LOG_comment}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="0" width="363" height="20" uuid="bd512212-aaf9-4801-82c8-d5bc725e1eb1"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="5" height="20" uuid="89e077f0-c2fb-448e-891a-8c85e4d338bc"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="470" y="0" width="5" height="20" uuid="378602bf-3501-4703-a72b-7dcb3683e20b"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="462" y="0" width="2" height="20" uuid="12566abf-8cf8-48ef-bdcf-c4240674d93f"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[/]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
